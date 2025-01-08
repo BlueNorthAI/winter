@@ -29,11 +29,6 @@ function classNames(...classes: string[]) {
 
 const navigation = [
   {
-    name: 'WM Agent',
-    to: '/chat',
-    current: true
-  },
-  {
     name: 'Dashboard',
     to: '/agent/dashboard',
     current: true
@@ -60,7 +55,7 @@ const navigation = [
     current: true
   },
   {
-    name: 'Analytics',
+    name: 'Insights',
     to: '/agent/warehouse',
     current: true
   }
