@@ -1,7 +1,7 @@
 'use client';
 import { kpiService_m } from '@/app/data/analysis/inventorycostData';
 import React, { useState } from 'react';
-import { Disclosure, Transition, Dialog } from '@headlessui/react';
+import { Disclosure} from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import {
   ChevronDoubleRightIcon,
@@ -31,12 +31,12 @@ const navigation = [
   },
   {
     name: 'Inventory Cost Analysis',
-    href: '/agent/analysis/inventoryAnalysis',
+    href: '/agent/analysis/invcostAnalysis',
     current: false
   },
   {
     name: 'On-Time Analysis',
-    href: '/agent/analysis/apAnalysis',
+    href: '/agent/analysis/ontimeAnalysis',
     current: false
   },
   {
@@ -57,7 +57,7 @@ const navigation = [
   {
     name: 'Spend Analysis',
     href: '/agent/analysis/spendAnalysis',
-    current: true
+    current: false
   },
   {
     name: 'Supplier Analysis',

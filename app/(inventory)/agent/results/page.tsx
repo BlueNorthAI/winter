@@ -18,7 +18,6 @@ import {
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 
-import LevelMaster from '@/components/lowes/LevelMaster';
 import Carrying from '@/components/risk/Carrying';
 import ResultOverall from '@/components/risk/ResultOverall';
 

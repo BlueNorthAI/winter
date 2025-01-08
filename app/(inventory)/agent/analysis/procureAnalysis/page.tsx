@@ -36,12 +36,12 @@ const navigation = [
   },
   {
     name: 'Inventory Cost Analysis',
-    href: '/agent/analysis/inventoryAnalysis',
+    href: '/agent/analysis/invcostAnalysis',
     current: false
   },
   {
     name: 'On-Time Analysis',
-    href: '/agent/analysis/apAnalysis',
+    href: '/agent/analysis/ontimeAnalysis',
     current: false
   },
   {

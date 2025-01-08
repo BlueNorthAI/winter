@@ -2,11 +2,7 @@
 import { kpiService_m } from '@/app/data/analysis/inventorycostData';
 import React, { Fragment, useState } from 'react';
 import {
-  Disclosure,
-  Menu,
-  Transition,
-  Dialog,
-  Popover
+  Disclosure
 } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import {
@@ -33,16 +29,16 @@ const navigation = [
   {
     name: 'Inventory Analysis',
     href: '/agent/analysis/inventoryAnalysis',
-    current: false
+    current: true
   },
   {
     name: 'Inventory Cost Analysis',
-    href: '/agent/analysis/inventoryAnalysis',
+    href: '/agent/analysis/invcostAnalysis',
     current: false
   },
   {
     name: 'On-Time Analysis',
-    href: '/agent/analysis/apAnalysis',
+    href: '/agent/analysis/ontimeAnalysis',
     current: false
   },
   {
@@ -63,7 +59,7 @@ const navigation = [
   {
     name: 'Spend Analysis',
     href: '/agent/analysis/spendAnalysis',
-    current: true
+    current: false
   },
   {
     name: 'Supplier Analysis',
@@ -72,11 +68,7 @@ const navigation = [
   }
 ];
 
-const sortOptions = [
-  { name: 'Most Popular', href: '#', current: true },
-  { name: 'Best Rating', href: '#', current: false },
-  { name: 'Newest', href: '#', current: false }
-];
+
 const filters = [
   {
     id: 'year',

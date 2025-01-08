@@ -1,28 +1,15 @@
 'use client';
 import {
-  reviewTabs,
-  meetingTabs,
-  kpiService_m,
-  kpiCost_m,
-  kpiService_q,
-  kpiCost_q,
-  kpiService_y,
-  kpiCost_y
+  kpiService_m
 } from '@/app/data/analysis/expenseData';
 import React, { Fragment, useState } from 'react';
 import {
   Disclosure,
-  Menu,
-  Transition,
-  Dialog,
-  Popover
+ 
 } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import {
-  ChatBubbleBottomCenterTextIcon,
-  PaperClipIcon,
-  PencilIcon,
-  TrashIcon,
+
   ChevronDoubleRightIcon,
   ChevronDownIcon
 } from '@heroicons/react/20/solid';
@@ -40,7 +27,7 @@ const navigation = [
   {
     name: 'Expense Analysis',
     href: '/agent/analysis/expenseAnalysis',
-    current: false
+    current: true
   },
   {
     name: 'Inventory Analysis',
@@ -49,12 +36,12 @@ const navigation = [
   },
   {
     name: 'Inventory Cost Analysis',
-    href: '/agent/analysis/inventoryAnalysis',
+    href: '/agent/analysis/invcostAnalysis',
     current: false
   },
   {
     name: 'On-Time Analysis',
-    href: '/agent/analysis/apAnalysis',
+    href: '/agent/analysis/ontimeAnalysis',
     current: false
   },
   {
@@ -75,7 +62,7 @@ const navigation = [
   {
     name: 'Spend Analysis',
     href: '/agent/analysis/spendAnalysis',
-    current: true
+    current: false
   },
   {
     name: 'Supplier Analysis',

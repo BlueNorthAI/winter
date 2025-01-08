@@ -1,15 +1,15 @@
-import { AgCharts } from 'ag-charts-react';
-
-// import { topology } from './topology'
+'use client'
+import { AgChartsReact } from 'ag-charts-react';
 import {
   topology,
   backgroundtopology,
   capitals
 } from '@/app/data/network/mapData/storeMap/topology';
 import 'ag-charts-enterprise'; // Import AgCharts Enterprise if needed
-import { AgChartOptions } from 'ag-charts-community';
+
 
 import { ProgressBar } from '@progress/kendo-react-progressbars';
+
 export const data = [
   { name: 'Alabama', code: 'AL', sales: 302289 },
   { name: 'Arizona', code: 'AZ', sales: 512504 },
@@ -297,7 +297,7 @@ export default function StoreMap() {
         ))}
       </ul>
       <div className="w-full h-[900px] ">
-        <AgCharts options={options as AgChartOptions} />
+        <AgChartsReact options={options} />
       </div>
     </div>
   );

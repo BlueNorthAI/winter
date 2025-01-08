@@ -1,26 +1,10 @@
 'use client'
-import { CheckCircleIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import * as React from 'react'
 
-import { Button, buttonVariants } from '@/components/ui/button'
-import {
-  IconGitHub,
-  IconNextChat,
-  IconSeparator,
-  IconVercel
-} from '@/components/ui/icons'
-import { UserMenu } from '@/components/user-menu'
-import { cn } from '@/lib/utils'
 
-import { ChatHistory } from './chat-history'
-import { SidebarMobile } from './sidebar-mobile'
-import { SidebarToggle } from './sidebar-toggle'
 
-import { auth } from '@/auth'
-import { Session } from '@/lib/types'
 
 
 function classNames(...classes: string[]) {
@@ -57,6 +41,11 @@ const navigation = [
   {
     name: 'Insights',
     to: '/agent/warehouse',
+    current: true
+  },
+  {
+    name: 'Trans',
+    to: '/agent/trans',
     current: true
   }
 ];

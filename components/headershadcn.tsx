@@ -2,12 +2,7 @@
 import Image from 'next/image';
 import * as React from 'react';
 import {
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-  useUser
-} from '@clerk/nextjs';
+  UserButton} from '@clerk/nextjs';
 
 import { NavigationRisk } from './navigationrisk';
 

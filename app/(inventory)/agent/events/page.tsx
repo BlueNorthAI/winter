@@ -8,8 +8,6 @@ import {
   ArrowTrendingUpIcon,
   PresentationChartBarIcon,
   ChartBarIcon,
-  Cog8ToothIcon,
-  UserCircleIcon,
   CpuChipIcon
 } from '@heroicons/react/20/solid';
 import { cn } from '@/lib/utils';

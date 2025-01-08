@@ -1,14 +1,5 @@
 'use client';
-import {
-  reviewTabs,
-  meetingTabs,
-  kpiService_m,
-  kpiCost_m,
-  kpiService_q,
-  kpiCost_q,
-  kpiService_y,
-  kpiCost_y
-} from '@/app/data/analysis/supplyData';
+import { kpiService_m } from '@/app/data/analysis/supplyData';
 import React, { Fragment, useState } from 'react';
 import {
   Disclosure,
@@ -18,21 +9,9 @@ import {
   Popover
 } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import {
-  ChatBubbleBottomCenterTextIcon,
-  PaperClipIcon,
-  PencilIcon,
-  TrashIcon,
-  ChevronDoubleRightIcon,
-  ChevronDownIcon
-} from '@heroicons/react/20/solid';
+import { ChevronDoubleRightIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 
-const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-};
+
 const navigation = [
   {
     name: 'Expense Analysis',
@@ -46,12 +25,12 @@ const navigation = [
   },
   {
     name: 'Inventory Cost Analysis',
-    href: '/agent/analysis/inventoryAnalysis',
+    href: '/agent/analysis/invcostAnalysis',
     current: false
   },
   {
     name: 'On-Time Analysis',
-    href: '/agent/analysis/apAnalysis',
+    href: '/agent/analysis/ontimeAnalysis',
     current: false
   },
   {
@@ -72,19 +51,15 @@ const navigation = [
   {
     name: 'Spend Analysis',
     href: '/agent/analysis/spendAnalysis',
-    current: true
+    current: false
   },
   {
     name: 'Supplier Analysis',
     href: '/agent/analysis/supplyAnalysis',
-    current: false
+    current: true
   }
 ];
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' }
-];
+
 
 const sortOptions = [
   { name: 'Most Popular', href: '#', current: true },
@@ -146,13 +121,8 @@ function classNames(...classes) {
 export default function SupplyAnalysisRoute() {
   const [open, setOpen] = useState(false);
 
-  const emptyStyles = { background: '#ef4444' };
-  const progressStyles = { background: '#22c55e' };
-  console.log(kpiService_m);
   return (
     <>
-      {/* ///////////// */}
-      {/* Filters */}
       <div
         className="flex flex-col"
         style={{

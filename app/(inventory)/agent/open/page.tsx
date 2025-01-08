@@ -1,4 +1,4 @@
-
+'use client'
 import taskData from '@/app/data/columndata/tasks.json';
 import linkData from '@/app/data/linkdata/link.json';
 
@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { RadioGroup } from '@headlessui/react';
 import { columns } from '@/components/datatable/columns-link';
 import { DataTable } from '@/components/datatable/data-table-link';
+import Image from 'next/image';
 
 const plans = [
   {
@@ -80,20 +81,20 @@ export default function Example() {
 
   const [selected, setSelected] = useState(plans[0]);
 
-  const exp = taskData.find((task) => task.id === exp.expId);
-  console.log(exp);
-  if (!exp) {
-    return null;
-  }
-  const status = statuses.find((status) => status.value === exp.status);
-  if (!status) {
-    return null;
-  }
-  const dots = dot.find((d) => d.value === exp.severity);
+//   const exp: Task | undefined = taskData.find((task) => task.id === exp.expId);
+//   console.log(exp);
+//   if (!exp) {
+//     return null;
+//   }
+//   const status = statuses.find((status) => status.value === exp.status);
+//   if (!status) {
+//     return null;
+//   }
+//   const dots = dot.find((d) => d.value === exp.severity);
 
-  if (!dots) {
-    return null;
-  }
+//   if (!dots) {
+//     return null;
+//   }
 
   return (
     <>
@@ -103,11 +104,11 @@ export default function Example() {
         <div className="p-2 flex items-center justify-between">
           <div className="min-w-0">
             <h1 className="text-xl font-semibold text-gray-900">
-              Exception Summary - {exp.sku}
+              Exception Summary 
             </h1>
-            <h2 className="mt-1 text-base text-gray-600">{exp.title}</h2>
+            <h2 className="mt-1 text-base text-gray-600">PPC Cement Bulk</h2>
             <div className="mt-1 flex flex-row flex-wrap space-x-4 sm:mt-0">
-              <div className="mt-2 flex items-center text-sm text-green-700">
+              {/* <div className="mt-2 flex items-center text-sm text-green-700">
                 <div className={`flex items-center ${status.textClr}`}>
                   {status.icon ? (
                     <status.icon className="mr-2 h-4 w-4 text-muted-foreground" />
@@ -116,8 +117,8 @@ export default function Example() {
                     {status.label}
                   </span>
                 </div>
-              </div>
-              <div className="mt-2 flex items-center text-sm text-gray-500">
+              </div> */}
+              {/* <div className="mt-2 flex items-center text-sm text-gray-500">
                 <div className="flex w-[80px] items-center">
                   {dots && (
                     <svg
@@ -130,16 +131,18 @@ export default function Example() {
                   )}
                   {dots && dots.label ? <span>{dots.label}</span> : null}
                 </div>
-              </div>
+              </div> */}
 
               <div className="mt-2 flex items-center">
-                <img
+                <Image
                   className="h-5 w-5 rounded-full"
-                  src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80"
-                  alt=""
+                  src="/images/avatar.png"
+                                  alt=""
+                                  height={100}
+                                  width={100}
                 />
 
-                <div className="ml-2 text-sm text-gray-500">{exp.owner}</div>
+                <div className="ml-2 text-sm text-gray-500">Owner</div>
               </div>
             </div>
           </div>
