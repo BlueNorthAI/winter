@@ -26,17 +26,18 @@ export function Header() {
   
 
       <NavigationRisk />
-        <div className="relative flex  size-13 items-center  justify-center rounded-full">
-        {/* <button className="text-sky-500 font-semibold  p-1 flex items-center space-x-2 ">
-          <div className="relative flex  size-13 items-center  justify-center rounded-full">
-            <div className="flex items-center justify-center  rounded-full bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500 shadow-lg p-0.5">
-              <Image
-                className="mx-auto bg-white  justify-center rounded-full p-1.5"
-                src="/assets/logo-4.png"
+      <div className="">
+         <Image
+                className="mr-2"
+                src="/assets/SN.png"
                 alt="logo"
                 width={50}
                 height={50}
               />
+        {/* <button className="text-sky-500 font-semibold  p-1 flex items-center space-x-2 ">
+          <div className="relative flex  size-13 items-center  justify-center rounded-full">
+            <div className="flex items-center justify-center  rounded-full bg-gradient-to-t from-indigo-400 via-cyan-400 to-sky-500 shadow-lg p-0.5">
+             
             </div>
           </div>
         </button> */}
